@@ -102,7 +102,7 @@ def solve():
         guess = input()
         guess_counter += 1
         guess = guess.upper()
-        # If not x5 try again
+        # TODO input validation such as check it's 5 letters or on the word list
         print('What was the output?')
         print('  G for Green')
         print('  Y for Yellow')
@@ -113,7 +113,7 @@ def solve():
             print(f"You won! {guess_counter} guesses")
             break
 
-        # IF not GYB x 5, then error, try again
+        # TODO response validation. Is it 5 letters and Y/G/B.
         possible_answers = update_possible_answers(guess, response, possible_answers)
         if len(possible_answers) == 0:
             print("There are no possible words, something went wrong.")

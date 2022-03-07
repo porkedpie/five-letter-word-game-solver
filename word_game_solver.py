@@ -25,6 +25,7 @@ else:
 
 
 # Get wordle response for a given guess against all words in word list
+# TODO fix how it deals with repeated letters
 def wordle_response(guess, word_list):
     list_output = []
     for answer in word_list:
@@ -41,7 +42,6 @@ def wordle_response(guess, word_list):
 
 
 # Drop possible answers fromt he word list based on a guess & response
-
 def update_possible_answers(guess, response, possible_answers):
     new_possible_answers = possible_answers.copy()
     for idx, letter in enumerate(guess):
